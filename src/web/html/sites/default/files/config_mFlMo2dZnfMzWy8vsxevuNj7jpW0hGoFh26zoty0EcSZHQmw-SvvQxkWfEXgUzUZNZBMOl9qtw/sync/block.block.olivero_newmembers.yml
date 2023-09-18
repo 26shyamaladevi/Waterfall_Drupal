@@ -1,0 +1,33 @@
+uuid: 2a9eec75-8af1-40b5-a9ef-9f3dd98625e0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:908385f6-76c6-4d44-9df8-a3c72e10d5ca'
+  module:
+    - block_content
+    - user
+  theme:
+    - olivero
+id: olivero_newmembers
+theme: olivero
+region: sidebar
+weight: -7
+provider: null
+plugin: 'block_content:908385f6-76c6-4d44-9df8-a3c72e10d5ca'
+settings:
+  id: 'block_content:908385f6-76c6-4d44-9df8-a3c72e10d5ca'
+  label: 'Why Join Us?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

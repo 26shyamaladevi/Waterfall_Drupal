@@ -1,0 +1,33 @@
+uuid: 8315b33f-f1e3-486d-b65f-b6be2b3acc7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4089837a-432f-41ea-b4f1-af251d58cd48'
+  module:
+    - block_content
+    - user
+  theme:
+    - olivero
+id: olivero_welcomeblock
+theme: olivero
+region: sidebar
+weight: -6
+provider: null
+plugin: 'block_content:4089837a-432f-41ea-b4f1-af251d58cd48'
+settings:
+  id: 'block_content:4089837a-432f-41ea-b4f1-af251d58cd48'
+  label: Welcome
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

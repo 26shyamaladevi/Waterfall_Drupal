@@ -1,0 +1,14 @@
+uuid: af6d9393-16b6-488b-a2c2-7d58a17d79c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.waterfall_manager
+  module:
+    - user
+id: user_add_role_action.waterfall_manager
+label: 'Add the Waterfall Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: waterfall_manager

@@ -1,0 +1,15 @@
+uuid: 8c393574-b80c-44cc-918f-330400bde2e0
+langcode: en
+status: true
+dependencies: {  }
+name: 800x600_video
+label: '800x600 Video'
+effects:
+  0b135545-2e57-40ab-a196-00bb83141f29:
+    uuid: 0b135545-2e57-40ab-a196-00bb83141f29
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 597
+      anchor: center-center

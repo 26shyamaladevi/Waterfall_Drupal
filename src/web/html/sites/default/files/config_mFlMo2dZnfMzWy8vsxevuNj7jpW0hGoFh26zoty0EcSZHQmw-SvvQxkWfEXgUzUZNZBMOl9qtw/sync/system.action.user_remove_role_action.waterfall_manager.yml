@@ -1,0 +1,14 @@
+uuid: e5f1c2c0-f677-4a52-8abf-8d84481d1fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.waterfall_manager
+  module:
+    - user
+id: user_remove_role_action.waterfall_manager
+label: 'Remove the Waterfall Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: waterfall_manager

@@ -1,0 +1,14 @@
+uuid: 1462238c-1a6e-48f0-bee2-36d70145a42b
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_url_pattern
+label: 'user URL pattern'
+type: 'canonical_entities:user'
+pattern: '/[current-user:display-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

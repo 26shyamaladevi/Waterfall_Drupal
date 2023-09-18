@@ -1,0 +1,10 @@
+uuid: ace72aa3-a7b6-400d-82a3-ae7cbeb685f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.temp
+label: temp
+targetEntityType: node
+cache: true

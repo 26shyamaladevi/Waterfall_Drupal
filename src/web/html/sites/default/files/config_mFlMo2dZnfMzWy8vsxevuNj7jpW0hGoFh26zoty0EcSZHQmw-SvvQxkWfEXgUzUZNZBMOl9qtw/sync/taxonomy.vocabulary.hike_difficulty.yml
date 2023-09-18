@@ -1,0 +1,8 @@
+uuid: 1fb8ed93-e9fd-4de0-bc90-0ae19cd2bb7b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hike difficulty'
+vid: hike_difficulty
+description: 'Categories for the challenge level.'
+weight: 0

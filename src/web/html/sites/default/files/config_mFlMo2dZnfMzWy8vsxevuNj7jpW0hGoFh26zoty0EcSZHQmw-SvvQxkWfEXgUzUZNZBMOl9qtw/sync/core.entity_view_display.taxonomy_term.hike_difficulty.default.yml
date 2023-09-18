@@ -1,0 +1,31 @@
+uuid: 3b4380e4-db0a-4728-b196-efb0477fdf16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.hike_difficulty.field_difficulty_icon
+    - taxonomy.vocabulary.hike_difficulty
+  module:
+    - text
+id: taxonomy_term.hike_difficulty.default
+targetEntityType: taxonomy_term
+bundle: hike_difficulty
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_difficulty_icon:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

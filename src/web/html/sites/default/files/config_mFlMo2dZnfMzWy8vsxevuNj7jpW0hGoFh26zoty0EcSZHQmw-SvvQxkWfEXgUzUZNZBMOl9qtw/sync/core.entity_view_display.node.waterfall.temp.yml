@@ -1,0 +1,290 @@
+uuid: d7cb5a7f-8097-4757-949f-568d8ce7b00e
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.temp
+    - field.field.node.waterfall.body
+    - field.field.node.waterfall.field_hike_difficulty
+    - field.field.node.waterfall.field_hike_duration
+    - field.field.node.waterfall.field_image
+    - field.field.node.waterfall.field_official_website
+    - field.field.node.waterfall.field_walking_and_driving_instru
+    - field.field.node.waterfall.field_waterfall_height
+    - field.field.node.waterfall.field_waterfall_location
+    - field.field.node.waterfall.field_waterfall_video
+    - field.field.node.waterfall.layout_builder__layout
+    - image.style.wide
+    - node.type.waterfall
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b0bd0d5e-1ba1-4d86-9080-7c753b4aaa24:
+            uuid: b0bd0d5e-1ba1-4d86-9080-7c753b4aaa24
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          80e31d64-02fb-413e-a6e4-fe7c6e2c3bd1:
+            uuid: 80e31d64-02fb-413e-a6e4-fe7c6e2c3bd1
+            region: content
+            configuration:
+              id: 'extra_field_block:node:waterfall:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          47a834cc-4001-4034-b674-30300be24574:
+            uuid: 47a834cc-4001-4034-b674-30300be24574
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          7a2870ec-e580-42bb-afe7-dfde9661ba24:
+            uuid: 7a2870ec-e580-42bb-afe7-dfde9661ba24
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_official_website'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          1133cb72-4f89-494a-bc6b-d823841a1d3d:
+            uuid: 1133cb72-4f89-494a-bc6b-d823841a1d3d
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_hike_duration'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          af5eab2f-22ac-4061-bbe3-2fdc128db4b6:
+            uuid: af5eab2f-22ac-4061-bbe3-2fdc128db4b6
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_walking_and_driving_instru'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          2c14b0f6-2f36-4902-bb6f-0fdc8c7494c6:
+            uuid: 2c14b0f6-2f36-4902-bb6f-0fdc8c7494c6
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_waterfall_height'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          b4894f91-82a3-4543-bc1f-dec4de06d20b:
+            uuid: b4894f91-82a3-4543-bc1f-dec4de06d20b
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_waterfall_video'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          7716505e-b59b-48a4-87e6-5309ccae11ab:
+            uuid: 7716505e-b59b-48a4-87e6-5309ccae11ab
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_waterfall_location'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          75c23888-66e9-44c9-8851-37495b64b662:
+            uuid: 75c23888-66e9-44c9-8851-37495b64b662
+            region: content
+            configuration:
+              id: 'field_block:node:waterfall:field_hike_difficulty'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+        third_party_settings: {  }
+id: node.waterfall.temp
+targetEntityType: node
+bundle: waterfall
+mode: temp
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hike_difficulty:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_hike_duration:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_official_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_walking_and_driving_instru:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_waterfall_height:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_waterfall_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_waterfall_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true
