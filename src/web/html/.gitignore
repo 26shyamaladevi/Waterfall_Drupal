@@ -34,5 +34,8 @@ modules/contrib
 #Ignore contrib themes
 themes/contrib
 
+# Exclude the configuration sync directory (do not ignore this)
+!sites/default/files/config/sync/
+
 
 
