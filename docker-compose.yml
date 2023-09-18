@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  web:
+    image: drupal_web:latest
+    build:
+      context: ./build/web
+    ports:
+      - 80:80
+    volumes:
+      - ./src/web:/var/www
+    depends_on:
+      - db
+    networks:
+      - drupaldemo
+  db:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: drupaldemo_proj
+      MARIADB_USER: drupaldemo
+      MARIADB_PASSWORD: drupaldemo123
+    networks:
+      - drupaldemo
+    volumes:
+      - ./data/db:/var/lib/mysql
+  phpmyadmin:
+    image: arm64v8/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    networks:
+      - drupaldemo
+    depends_on:
+      - db
+    ports:
+      - 8081:80
+
+networks:
+  drupaldemo:
+    driver: bridge
