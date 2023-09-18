@@ -27,12 +27,41 @@ cd Waterfall_Drupal
 
 `docker-compose up -d`
 
-This command will start the Docker containers needed to run the Drupal website.
+- This command will start the Docker containers needed to run the Drupal website.
 
 3. **Access the website**:
 
 - Once the Docker containers are up and running, you can access the Waterfall Handbook website in your web browser at `http://localhost`.
 
-4. **Explore the Handbook**:
+4. **Database Import**:
+
+- Import a database from an SQL dump file (`database_dump.sql`) to a Drupal database. Follow these steps to perform the import:
+
+- **Drop the Current Database (Optional) & Import DB:**
+
+  - If you want to replace the existing database with the new data from the dump file, you can use the `drush sql-drop` command to drop the current database. Be cautious as this will erase all data in the database.
+
+  ```bash
+  drush sql-drop -y
+  drush sql-cli < ./src/web/database_dump.sql
+  ```
+
+5. **Import Config**:
+
+- Import configuration changes into your Drupal site:
+
+```bash
+ drush config:import
+```
+
+- Clear the Cache (if needed):
+
+  - After importing configuration changes, it's a good practice to clear the cache to ensure that the changes take effect:
+
+    ```bash
+    drush cache:rebuild
+    ```
+
+6. **Explore the Handbook**:
 
 - Use the website's navigation to explore the Waterfall Handbook.
